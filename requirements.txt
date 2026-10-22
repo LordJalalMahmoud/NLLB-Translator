@@ -1,0 +1,5 @@
+# Meta NLLB-200 AI Translator Requirements
+ctranslate2>=4.0.0
+transformers>=4.40.0
+huggingface-hub>=0.20.0
+sentencepiece>=0.1.99

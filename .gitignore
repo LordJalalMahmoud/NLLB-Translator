@@ -1,0 +1,18 @@
+# Python Virtual Environment
+venv/
+env/
+.venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Model weights directory (600MB - downloaded automatically by download_model.py)
+models/
+*.bin
+*.model
+
+# Logs & Temporary Files
+*.log
+*.tmp
+.DS_Store

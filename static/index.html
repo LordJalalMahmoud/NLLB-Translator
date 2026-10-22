@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta NLLB-200 AI Translator 🌟 | مترجم الذكاء الاصطناعي فائق الجودة</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">
+          <!-- Sparkle/Brain Icon -->
+          <svg viewBox="0 0 24 24"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/></svg>
+        </div>
+        <div>
+          <h1 style="font-size: 1.4rem; font-weight: 800;">Meta NLLB-200 AI Translator 🌟</h1>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">مترجم الجيل الجديد عالي الدقة (فصحى + مصري + مقارنة مباشرة مع النموذج القديم)</p>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <span class="pill" style="color: var(--accent-success);">🟢 100% بدون إنترنت (أوفلاين)</span>
+        <span class="pill" id="timeBadge">⚡ وقت الاستجابة: --</span>
+        <button class="btn-icon" id="themeToggle" title="تبديل المظهر">
+          <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="card">
+      <div style="margin-bottom: 10px; font-weight: 700; font-size: 0.95rem;">النص الإنجليزي (English Input):</div>
+      <textarea class="input-box" id="inputEnglish" autofocus>The ancient dragon awoke from its thousand-year slumber, furious that mortal warriors dared to enter its sanctum.</textarea>
+
+      <div class="samples-row">
+        <span style="font-size: 0.82rem; color: var(--text-muted);">أمثلة تكشف قوة NLLB:</span>
+        <button class="sample-btn" data-sample="Break a leg tonight! It is raining cats and dogs outside, but we must make ends meet.">🎭 أمثال ومصطلحات مجازية</button>
+        <button class="sample-btn" data-sample="The ancient dragon awoke from its thousand-year slumber, furious that mortal warriors dared to enter its sanctum.">🐉 قصة حوار لعبة RPG</button>
+        <button class="sample-btn" data-sample="Ancient Ring of the Phoenix: grants complete immunity to fire and revives the hero once upon death.">💍 وصف عنصر سحري نادر</button>
+        <button class="sample-btn" data-sample="Halt! Who goes there? State your business in this kingdom or prepare to defend yourself.">⚔️ حوار حارس بوابة</button>
+      </div>
+
+      <button class="btn-translate" id="btnTranslate">
+        <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2z"/></svg>
+        <span>ترجمة بالذكاء الاصطناعي NLLB-200 (Ctrl+Enter)</span>
+      </button>
+
+      <!-- 4 Cards Comparison Grid -->
+      <div class="comparison-grid">
+
+        <!-- 1. Meta NLLB Modern Standard Arabic -->
+        <div class="comp-card" style="border-top: 3px solid var(--accent-nllb);">
+          <div class="comp-header">
+            <div class="comp-title" style="color: var(--accent-nllb);">
+              <span>🌟 Meta NLLB-200 (عربي فصحى)</span>
+            </div>
+            <span class="pill" style="font-size: 0.7rem; color: var(--accent-nllb);">أعلى جودة وسياق</span>
+          </div>
+          <div class="comp-text" id="outStandard">---</div>
+          <div class="comp-actions">
+            <span>فهم كامل للمعنى والضمائر</span>
+            <button class="sample-btn copy-btn" data-target="outStandard">نسخ</button>
+          </div>
+        </div>
+
+        <!-- 2. Meta NLLB Egyptian Arabic -->
+        <div class="comp-card" style="border-top: 3px solid var(--accent-egypt);">
+          <div class="comp-header">
+            <div class="comp-title" style="color: var(--accent-egypt);">
+              <span>🇪🇬 Meta NLLB-200 (لهجة مصرية)</span>
+            </div>
+            <span class="pill" style="font-size: 0.7rem; color: var(--accent-egypt);">عامية تفاعلية</span>
+          </div>
+          <div class="comp-text" id="outEgyptian">---</div>
+          <div class="comp-actions">
+            <span>ممتاز لألعاب الفيديو الحماسية</span>
+            <button class="sample-btn copy-btn" data-target="outEgyptian">نسخ</button>
+          </div>
+        </div>
+
+        <!-- 3. Franco/Arabizi -->
+        <div class="comp-card" style="border-top: 3px solid var(--accent-franco);">
+          <div class="comp-header">
+            <div class="comp-title" style="color: var(--accent-franco);">
+              <span>💬 الفرانكو / عربيزي (Franco)</span>
+            </div>
+            <span class="pill" style="font-size: 0.7rem; color: var(--accent-franco);">مشتق من NLLB</span>
+          </div>
+          <div class="comp-text franco" id="outFranco">---</div>
+          <div class="comp-actions">
+            <span>حروف وأرقام الفرانكو</span>
+            <button class="sample-btn copy-btn" data-target="outFranco">نسخ</button>
+          </div>
+        </div>
+
+        <!-- 4. Legacy Argos Model -->
+        <div class="comp-card" style="border-top: 3px solid var(--accent-old); opacity: 0.85;">
+          <div class="comp-header">
+            <div class="comp-title" style="color: var(--accent-old);">
+              <span>⚖️ النموذج القديم (Argos Translate)</span>
+            </div>
+            <span class="pill" style="font-size: 0.7rem; color: var(--accent-old);">للمقارنة المباشرة</span>
+          </div>
+          <div class="comp-text" id="outArgos">---</div>
+          <div class="comp-actions">
+            <span>ترجمة حرفية كلاسيكية</span>
+            <button class="sample-btn copy-btn" data-target="outArgos">نسخ</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
